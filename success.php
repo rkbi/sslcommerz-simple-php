@@ -70,6 +70,11 @@
             } else {
                 echo "<h2 style='color: green; text-align: center;'>Congratulations! Your Transaction is Successful </h2>";
                 echo "<span style='color: red;'>But validation failed.</span><h2> Transaction ID: " . $_POST['tran_id'] . "</h2>";
+
+                if(DEBUG) {
+                    echo '<pre>';
+                    print_r($content);
+                }
             }
         } else {
 

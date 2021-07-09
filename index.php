@@ -56,6 +56,12 @@ if($code == 200 && !( curl_errno($handle))) {
 } else {
 	curl_close( $handle);
 	echo "FAILED TO CONNECT WITH SSLCOMMERZ API - $code";
+
+    if(DEBUG) {
+        echo '<pre>';
+        print_r($content);
+    }
+
 	exit;
 }
 
