@@ -18,7 +18,11 @@ if ($status == 'VALID') {
     ];
     $queryString = http_build_query($data);
 
-    $return    = file_get_contents($validationUrl . "?" . $queryString);
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, $validationUrl . "?" . $queryString);
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+    $return = curl_exec($handle);
+    curl_close($handle);
     $content   = json_decode($return);
     $valStatus = $content->status;
 
