@@ -12,7 +12,7 @@ $post_data['tran_id'] = "SSLCZ_".uniqid();
 $post_data['success_url'] = PROJECT_URL . "/success.php";
 $post_data['fail_url'] = PROJECT_URL . "/fail.php";
 $post_data['cancel_url'] = PROJECT_URL . "/cancel.php";
-$post_data['cancel_url'] = PROJECT_URL . "/ipn.php";
+$post_data['ipn_url'] = PROJECT_URL . "/ipn.php";
 
 # CUSTOMER INFORMATION
 $post_data['cus_name'] = "Name";
