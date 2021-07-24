@@ -14,7 +14,7 @@ if ($status == 'VALID') {
         'val_id'       => $_POST['val_id'],
         'store_id'     => STORE_ID,
         'store_passwd' => STORE_PASSWD,
-        'format'       => json,
+        'format'       => 'json',
     ];
     $queryString = http_build_query($data);
 
